@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-md-background text-md-onBackground antialiased selection:bg-md-primaryContainer selection:text-md-onPrimaryContainer;
+    font-family: 'Roboto', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
