@@ -1,87 +1,80 @@
-# 🎓 Fullstack Telegram Mini App: Course Platform
+# 🎓 Fullstack Telegram Mini App: Образовательная платформа
 
-> **Modern, high-performance educational ecosystem inside Telegram.**
+> **Современная высокопроизводительная образовательная экосистема внутри Telegram.**
 
-![Platform Preview](https://cdni.iconscout.com/illustration/premium/thumb/coding-4488737-3738466.png)
+![Превью платформы](https://cdni.iconscout.com/illustration/premium/thumb/coding-4488737-3738466.png)
 
-## 💎 Project Essence
-This project is a state-of-the-art **Telegram Mini App (TMA)** designed for educational platforms. It features a seamless integration between a Telegram Bot and a React-based web interface, providing a native-like experience with high-end animations and haptic feedback.
-
----
-
-## 🛠 Tech Stack
-
-### Frontend & UI
-- **React 18 & TypeScript** — Type-safe, component-based development.
-- **Tailwind CSS** — Modern, responsive utility-first styling.
-- **Framer Motion** — Premium micro-animations and smooth transitions.
-- **Telegram WebApp SDK** — Native interaction (Haptics, MainButton).
-
-### Backend & Storage
-- **Node.js** — Fast and scalable runtime.
-- **Telegraf** — Robust Telegram Bot API framework.
-- **Better-SQLite3** — High-performance local SQL storage.
+## 💎 Суть проекта
+Данный проект представляет собой современное **Telegram Mini App (TMA)**, разработанное для образовательных платформ. Оно обеспечивает бесшовную интеграцию между Telegram-ботом и веб-интерфейсом на базе React, предоставляя нативный пользовательский опыт с высококачественными анимациями и тактильной отдачей (haptic feedback).
 
 ---
 
-## 🏗 Modular Architecture
-The project follows a **Modified Feature-Sliced Design (FSD)** for scalability and maintainability.
+## 🛠 Технологический стек
+
+### Фронтенд и UI
+- **React 18 & TypeScript** — Типизированная компонентная разработка.
+- **Tailwind CSS** — Современная адаптивная стилизация.
+- **Framer Motion** — Микро-анимации премиум-класса и плавные переходы.
+- **Telegram WebApp SDK** — Нативное взаимодействие (Haptics, MainButton).
+
+### Бэкенд и Хранение
+- **Node.js** — Быстрая и масштабируемая среда выполнения.
+- **Telegraf** — Мощный фреймворк для Telegram Bot API.
+- **Better-SQLite3** — Высокопроизводительное локальное SQL-хранилище.
+
+---
+
+## 🏗 Модульная архитектура
+Проект следует модифицированному принципу **Feature-Sliced Design (FSD)** для обеспечения масштабируемости и удобства поддержки.
 
 ```bash
-├── backend/            # Telegraf Bot & SQLite Logic
-│   ├── db.js           # Database Abstraction Layer
-│   ├── index.js        # Bot Controllers & Main Logic
-│   └── .env.example    # Configuration Template
+├── backend/            # Логика бота Telegraf и SQLite
+│   ├── db.js           # Уровень абстракции базы данных
+│   ├── index.js        # Контроллеры бота и основная логика
+│   └── .env.example    # Шаблон конфигурации
 ├── frontend/           # React WebApp (Vite)
 │   ├── src/
-│   │   ├── app/        # App entry & global providers
-│   │   ├── entities/   # Business logic (Roadmap, Modules)
-│   │   ├── pages/      # View components
-│   │   └── shared/     # UI Kit, Types & Utilities
-└── .gitignore          # Production-ready safety filters
+│   │   ├── app/        # Точка входа и глобальные провайдеры
+│   │   ├── entities/   # Бизнес-логика (Дорожная карта, модули)
+│   │   ├── pages/      # Компоненты страниц
+│   │   └── shared/     # UI Kit, типы и утилиты
+└── .gitignore          # Готовые фильтры безопасности для продакшена
 ```
 
 ---
 
-## 🚀 Key Features
+## 🚀 Ключевые особенности
 
-### 1. Interactive Learning Roadmap
-A visually stunning timeline with progress indicators and haptic engagement points.
+### 1. Интерактивная дорожная карта обучения
+Визуально впечатляющая временная шкала с индикаторами прогресса и тактильными точками взаимодействия.
 
-### 2. Intelligent Onboarding (Warmup)
-A dynamic pre-entry animation sequence to engage users before they see the product.
+### 2. Интеллектуальный онбординг (Warmup)
+Динамическая анимационная последовательность перед входом для вовлечения пользователей перед показом основного продукта.
 
-### 3. Integrated Admin Dashboard
-Real-time metrics and content management accessible only to specialized IDs via a secure `admin` parameter.
+### 3. Интегрированная панель администратора
+Метрики в реальном времени и управление контентом, доступные только для определенных ID через защищенный параметр `admin`.
 
-### 4. Persistence Layer
-Every user interaction is logged. No data is lost; every entry point is tracked via SQLite.
+### 4. Слой персистентности
+Все взаимодействия пользователей записываются. Данные не теряются; каждое вхождение отслеживается через SQLite.
 
 ---
 
-## 🚦 Quick Start Guide
+## 🚦 Инструкция по быстрому запуску
 
-### Setup Environment
-1. Navigate to `/backend`.
-2. Copy `.env.example` to `.env`.
-3. Fill in your `BOT_TOKEN` (from @BotFather) and `ADMIN_ID`.
+### Настройка окружения
+1. Перейдите в папку `/backend`.
+2. Скопируйте файл `.env.example` в `.env`.
+3. Укажите ваш `BOT_TOKEN` (полученный у @BotFather) и `ADMIN_ID`.
 
-### Run Development
+### Запуск в режиме разработки
 ```bash
-# Start Backend
+# Запуск бэкенда
 cd backend && npm install && npm start
 
-# Start Frontend
+# Запуск фронтенда
 cd frontend && npm install && npm run dev
 ```
 
 ---
 
-## 🔮 Future Roadmap
-- [ ] **Payments (Phase 2)**: Integration with Telegram Payments for course sales.
-- [ ] **Auth Layer**: JWT-based authentication for off-platform access.
-- [ ] **Video Hosting**: Direct streaming integration for lessons.
-
----
-
-*Designed with ❤️ for the future of EdTech.*
+*Разработано с ❤️ для будущего EdTech.*
