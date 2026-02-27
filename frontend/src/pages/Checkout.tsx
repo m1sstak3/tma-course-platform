@@ -23,20 +23,36 @@ export const Checkout = ({ onBack }: CheckoutProps) => {
                 </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto px-6 pb-8">
+            <div className="flex-1 overflow-y-auto px-6 pb-8 relative">
+                {/* Background Accents */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-600/10 blur-[120px] rounded-full -z-10" />
+                <div className="absolute bottom-1/4 left-0 w-32 h-32 bg-purple-600/10 blur-[80px] rounded-full -z-10" />
+
                 {/* Lock Icon and Title */}
                 <div className="flex flex-col items-center text-center mt-2 mb-8">
                     <motion.div
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        className="w-16 h-16 rounded-full bg-indigo-500/20 flex items-center justify-center mb-4"
+                        initial={{ scale: 0, rotate: -45 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        transition={{ type: "spring", damping: 12, stiffness: 200 }}
+                        className="w-20 h-20 rounded-3xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-6 shadow-[0_15px_35px_rgba(79,70,229,0.3)]"
                     >
-                        <Lock className="w-8 h-8 text-indigo-400" />
+                        <Lock className="w-10 h-10 text-white" />
                     </motion.div>
-                    <h1 className="text-3xl font-bold text-white mb-2 tracking-tight">Полный доступ</h1>
-                    <p className="text-sm font-medium text-md-onSurfaceVariant">
+                    <motion.h1
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        className="text-4xl font-black text-white mb-2 tracking-tighter"
+                    >
+                        Полный доступ
+                    </motion.h1>
+                    <motion.p
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.1 }}
+                        className="text-sm font-medium text-md-onSurfaceVariant px-4"
+                    >
                         Присоединяйтесь к 50,000+ студентов, осваивающих Fullstack-разработку
-                    </p>
+                    </motion.p>
                 </div>
 
                 {/* Pricing Card */}
